@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/categoriyAnimalsFragment"
+        android:name="com.example.zoobereketmarket.ui.categoriy.CategoriyAnimalsFragment"
+        android:label="CategoriyAnimalsFragment"
+        tools:layout="@layout/fragment_animals_categoriy">
+        <action
+            android:id="@+id/action_categoriyAnimalsFragment_to_infoAnimalsFragment"
+            app:destination="@id/infoAnimalsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoAnimalsFragment"
+        android:name="com.example.zoobereketmarket.ui.animals.InfoAnimalsFragment"
+        android:label="InfoAnimalsFragment"
+        tools:layout="@layout/fragment_animal_info" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.zoobereketmarket.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.example.zoobereketmarket.ui.post.PostFragment"
+        android:label="PostFragment"
+        tools:layout="@layout/fragment_post" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.zoobereketmarket.ui.register.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.zoobereketmarket.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.zoobereketmarket.ui.main.MainFragment"
+        tools:layout="@layout/fragment_main"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_categoriyAnimalsFragment"
+            app:destination="@id/categoriyAnimalsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+</navigation>
